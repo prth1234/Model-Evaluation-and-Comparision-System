@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "80cb367c-f929-4427-8c10-eff9aa2c9f86",
+		"name": "Model Eval",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33080074"
+	},
+	"item": [
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/health",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question Answer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Key",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "admin2",
+						"value": "user2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"My name is Parth Singh & my profession is Software Developer\",\n  \"task\": \"question_answering\",\n  \"question\": \"What am I?\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/evaluate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"evaluate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Question Answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-Key",
+								"value": "admin1",
+								"type": "text"
+							},
+							{
+								"key": "admin2",
+								"value": "user2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"text\": \"My name is Parth Singh and my profession is Software Developer\",\n  \"task\": \"question_answering\",\n  \"question\": \"What am I?\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/evaluate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"evaluate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 15:03:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1017"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bert-base-uncased\": [\n        {\n            \"answer\": \"Parth Singh and\",\n            \"score\": 0.010710651986300945\n        }\n    ],\n    \"bert-large-uncased-whole-word-masking-finetuned-squad\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.8756000399589539\n        }\n    ],\n    \"deepset/roberta-base-squad2\": [\n        {\n            \"answer\": \"Parth Singh\",\n            \"score\": 0.26722168922424316\n        }\n    ],\n    \"deepset/xlnet-base-cased-squad2\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.23764009773731232\n        }\n    ],\n    \"distilbert-base-cased-distilled-squad\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.23764009773731232\n        }\n    ],\n    \"google/t5-base-qa-qg-hl\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.23764009773731232\n        }\n    ],\n    \"google/t5-small-qa-qg-hl\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.23764009773731232\n        }\n    ],\n    \"twmkn9/albert-base-v2-squad2\": [\n        {\n            \"answer\": \"Software Developer\",\n            \"score\": 0.23764009773731232\n        }\n    ]\n}"
+				},
+				{
+					"name": "Question Answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "admin2",
+								"value": "user2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"text\": \"My name is Parth Singh & my profession is Software Developer\",\n  \"task\": \"question_answering\",\n  \"question\": \"What am I?\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/evaluate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"evaluate"
+							]
+						}
+					},
+					"status": "UNAUTHORIZED",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 15:04:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid or missing API Key\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Name Entity Recognition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Key",
+						"value": "admin1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"text\": \"Barack Obama was the 44th president of the United States.\",\n        \"task\": \"ner\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/evaluate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"evaluate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Name Entity Recognition",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-Key",
+								"value": "admin1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"text\": \"Barack Obama was the 44th president of the United States.\",\n        \"task\": \"ner\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/evaluate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"evaluate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 15:03:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6545"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Jean-Baptiste/roberta-large-ner-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"PER\",\n            \"index\": 1,\n            \"score\": 0.9976361989974976,\n            \"start\": 0,\n            \"word\": \"ĠBarack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"PER\",\n            \"index\": 2,\n            \"score\": 0.9987756609916687,\n            \"start\": 7,\n            \"word\": \"ĠObama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"LOC\",\n            \"index\": 10,\n            \"score\": 0.9998613595962524,\n            \"start\": 43,\n            \"word\": \"ĠUnited\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"LOC\",\n            \"index\": 11,\n            \"score\": 0.999924898147583,\n            \"start\": 50,\n            \"word\": \"ĠStates\"\n        },\n        {\n            \"end\": 57,\n            \"entity\": \"LOC\",\n            \"index\": 12,\n            \"score\": 0.6439290046691895,\n            \"start\": 56,\n            \"word\": \".\"\n        }\n    ],\n    \"bert-base-NER\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"bhadresh-savani/albert-base-v2-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"dbmdz/bert-large-cased-finetuned-conll03-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"elastic/distilbert-base-cased-finetuned-conll03-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"B-PER\",\n            \"index\": 1,\n            \"score\": 0.9990044236183167,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9980114698410034,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"B-LOC\",\n            \"index\": 10,\n            \"score\": 0.9994909763336182,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9995416402816772,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"google/t5-base-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"google/t5-small-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"xlnet-base-cased\": [\n        {\n            \"end\": 6,\n            \"entity\": \"LABEL_0\",\n            \"index\": 0,\n            \"score\": 0.9708372950553894,\n            \"start\": 0,\n            \"word\": \"▁Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"LABEL_0\",\n            \"index\": 1,\n            \"score\": 0.9752084016799927,\n            \"start\": 7,\n            \"word\": \"▁Obama\"\n        },\n        {\n            \"end\": 16,\n            \"entity\": \"LABEL_0\",\n            \"index\": 2,\n            \"score\": 0.9778650999069214,\n            \"start\": 13,\n            \"word\": \"▁was\"\n        },\n        {\n            \"end\": 20,\n            \"entity\": \"LABEL_0\",\n            \"index\": 3,\n            \"score\": 0.9671897888183594,\n            \"start\": 17,\n            \"word\": \"▁the\"\n        },\n        {\n            \"end\": 23,\n            \"entity\": \"LABEL_0\",\n            \"index\": 4,\n            \"score\": 0.8954972624778748,\n            \"start\": 21,\n            \"word\": \"▁44\"\n        },\n        {\n            \"end\": 25,\n            \"entity\": \"LABEL_0\",\n            \"index\": 5,\n            \"score\": 0.8676654696464539,\n            \"start\": 23,\n            \"word\": \"th\"\n        },\n        {\n            \"end\": 35,\n            \"entity\": \"LABEL_0\",\n            \"index\": 6,\n            \"score\": 0.9463056921958923,\n            \"start\": 26,\n            \"word\": \"▁president\"\n        },\n        {\n            \"end\": 38,\n            \"entity\": \"LABEL_0\",\n            \"index\": 7,\n            \"score\": 0.9501432776451111,\n            \"start\": 36,\n            \"word\": \"▁of\"\n        },\n        {\n            \"end\": 42,\n            \"entity\": \"LABEL_0\",\n            \"index\": 8,\n            \"score\": 0.9800011515617371,\n            \"start\": 39,\n            \"word\": \"▁the\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"LABEL_0\",\n            \"index\": 9,\n            \"score\": 0.9744396805763245,\n            \"start\": 43,\n            \"word\": \"▁United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"LABEL_0\",\n            \"index\": 10,\n            \"score\": 0.9750983119010925,\n            \"start\": 50,\n            \"word\": \"▁States\"\n        },\n        {\n            \"end\": 57,\n            \"entity\": \"LABEL_0\",\n            \"index\": 11,\n            \"score\": 0.9330271482467651,\n            \"start\": 56,\n            \"word\": \".\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Text classification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Key",
+						"value": "admin1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"text\": \"Barack Obama was the 44th president of the United States.\",\n        \"task\": \"ner\"\n    }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/evaluate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"evaluate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Text classification",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-Key",
+								"value": "admin1"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"text\": \"Barack Obama was the 44th president of the United States.\",\n        \"task\": \"ner\"\n    }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/evaluate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"evaluate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 15:02:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6544"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Jean-Baptiste/roberta-large-ner-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"PER\",\n            \"index\": 1,\n            \"score\": 0.9976361989974976,\n            \"start\": 0,\n            \"word\": \"ĠBarack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"PER\",\n            \"index\": 2,\n            \"score\": 0.9987756609916687,\n            \"start\": 7,\n            \"word\": \"ĠObama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"LOC\",\n            \"index\": 10,\n            \"score\": 0.9998613595962524,\n            \"start\": 43,\n            \"word\": \"ĠUnited\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"LOC\",\n            \"index\": 11,\n            \"score\": 0.999924898147583,\n            \"start\": 50,\n            \"word\": \"ĠStates\"\n        },\n        {\n            \"end\": 57,\n            \"entity\": \"LOC\",\n            \"index\": 12,\n            \"score\": 0.6439290046691895,\n            \"start\": 56,\n            \"word\": \".\"\n        }\n    ],\n    \"bert-base-NER\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"bhadresh-savani/albert-base-v2-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"dbmdz/bert-large-cased-finetuned-conll03-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"elastic/distilbert-base-cased-finetuned-conll03-english\": [\n        {\n            \"end\": 6,\n            \"entity\": \"B-PER\",\n            \"index\": 1,\n            \"score\": 0.9990044236183167,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9980114698410034,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"B-LOC\",\n            \"index\": 10,\n            \"score\": 0.9994909763336182,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9995416402816772,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"google/t5-base-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"google/t5-small-ner\": [\n        {\n            \"end\": 6,\n            \"entity\": \"I-PER\",\n            \"index\": 1,\n            \"score\": 0.9989069700241089,\n            \"start\": 0,\n            \"word\": \"Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"I-PER\",\n            \"index\": 2,\n            \"score\": 0.9994590878486633,\n            \"start\": 7,\n            \"word\": \"Obama\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"I-LOC\",\n            \"index\": 10,\n            \"score\": 0.9991918206214905,\n            \"start\": 43,\n            \"word\": \"United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"I-LOC\",\n            \"index\": 11,\n            \"score\": 0.9981897473335266,\n            \"start\": 50,\n            \"word\": \"States\"\n        }\n    ],\n    \"xlnet-base-cased\": [\n        {\n            \"end\": 6,\n            \"entity\": \"LABEL_1\",\n            \"index\": 0,\n            \"score\": 0.7852739691734314,\n            \"start\": 0,\n            \"word\": \"▁Barack\"\n        },\n        {\n            \"end\": 12,\n            \"entity\": \"LABEL_1\",\n            \"index\": 1,\n            \"score\": 0.8857603073120117,\n            \"start\": 7,\n            \"word\": \"▁Obama\"\n        },\n        {\n            \"end\": 16,\n            \"entity\": \"LABEL_1\",\n            \"index\": 2,\n            \"score\": 0.763512134552002,\n            \"start\": 13,\n            \"word\": \"▁was\"\n        },\n        {\n            \"end\": 20,\n            \"entity\": \"LABEL_1\",\n            \"index\": 3,\n            \"score\": 0.6709874868392944,\n            \"start\": 17,\n            \"word\": \"▁the\"\n        },\n        {\n            \"end\": 23,\n            \"entity\": \"LABEL_0\",\n            \"index\": 4,\n            \"score\": 0.5348556041717529,\n            \"start\": 21,\n            \"word\": \"▁44\"\n        },\n        {\n            \"end\": 25,\n            \"entity\": \"LABEL_1\",\n            \"index\": 5,\n            \"score\": 0.8822788000106812,\n            \"start\": 23,\n            \"word\": \"th\"\n        },\n        {\n            \"end\": 35,\n            \"entity\": \"LABEL_1\",\n            \"index\": 6,\n            \"score\": 0.7552758455276489,\n            \"start\": 26,\n            \"word\": \"▁president\"\n        },\n        {\n            \"end\": 38,\n            \"entity\": \"LABEL_1\",\n            \"index\": 7,\n            \"score\": 0.7537527084350586,\n            \"start\": 36,\n            \"word\": \"▁of\"\n        },\n        {\n            \"end\": 42,\n            \"entity\": \"LABEL_1\",\n            \"index\": 8,\n            \"score\": 0.5851723551750183,\n            \"start\": 39,\n            \"word\": \"▁the\"\n        },\n        {\n            \"end\": 49,\n            \"entity\": \"LABEL_1\",\n            \"index\": 9,\n            \"score\": 0.7002764940261841,\n            \"start\": 43,\n            \"word\": \"▁United\"\n        },\n        {\n            \"end\": 56,\n            \"entity\": \"LABEL_1\",\n            \"index\": 10,\n            \"score\": 0.7676549553871155,\n            \"start\": 50,\n            \"word\": \"▁States\"\n        },\n        {\n            \"end\": 57,\n            \"entity\": \"LABEL_1\",\n            \"index\": 11,\n            \"score\": 0.5158227682113647,\n            \"start\": 56,\n            \"word\": \".\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Text Summarisation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Key",
+						"value": "admin1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"text\": \"All things must end. When people think of stars dying, what typically comes to mind are massive supernovas and the creation of black holes. However, this will not be the case with our Sun due to the fact that it is simply not massive enough. About one billion years after the Sun tries to swallow Earth, the red giant will undergo a process called Helium flash where huge amounts of Helium is fused to Carbon in a matter of minutes. Once the Helium in the core starts fusion, the star will then shrink but gain luminosity. Over the course of the next 20 million years, the Sun will then become unstable and begin losing mass through a series of thermal pulses. These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. That discarded material will briefly form a beautiful planetary nebula. The remnant will eventually cool and become a white dwarf which is mostly made up of just carbon and oxygen. This smoldering ember will glow for trillions of years before fading to black\",\n      \"task\": \"text_summarization\"\n    }\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/evaluate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"evaluate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Text Summarisation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-Key",
+								"value": "admin1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"text\": \"All things must end. When people think of stars dying, what typically comes to mind are massive supernovas and the creation of black holes. However, this will not be the case with our Sun due to the fact that it is simply not massive enough. About one billion years after the Sun tries to swallow Earth, the red giant will undergo a process called Helium flash where huge amounts of Helium is fused to Carbon in a matter of minutes. Once the Helium in the core starts fusion, the star will then shrink but gain luminosity. Over the course of the next 20 million years, the Sun will then become unstable and begin losing mass through a series of thermal pulses. These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. That discarded material will briefly form a beautiful planetary nebula. The remnant will eventually cool and become a white dwarf which is mostly made up of just carbon and oxygen. This smoldering ember will glow for trillions of years before fading to black\",\n      \"task\": \"text_summarization\"\n    }\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/evaluate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"evaluate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jul 2024 15:01:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2039"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"albert-base-v2\": \"These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. Once the Helium in the core starts fusion, the star will then shrink but gain luminosity\",\n    \"bert-base-uncased\": \"After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. The remnant will eventually cool and become a white dwarf which is mostly made up of just carbon and oxygen\",\n    \"bert-large-uncased\": \"After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. Once the Helium in the core starts fusion, the star will then shrink but gain luminosity\",\n    \"distilbert-base-uncased\": \"These powerful bursts of radiation will cause the Sun to fling wave after wave of material out into space. After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. When people think of stars dying, what typically comes to mind are massive supernovas and the creation of black holes\",\n    \"roberta-base\": \"After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. The remnant will eventually cool and become a white dwarf which is mostly made up of just carbon and oxygen. Over the course of the next 20 million years, the Sun will then become unstable and begin losing mass through a series of thermal pulses\",\n    \"xlnet-base-cased\": \"After about 500,000 years of these stellar tantrums, the Sun will have tossed away half of its mass. Once the Helium in the core starts fusion, the star will then shrink but gain luminosity. The remnant will eventually cool and become a white dwarf which is mostly made up of just carbon and oxygen\"\n}"
+				}
+			]
+		}
+	]
+}
